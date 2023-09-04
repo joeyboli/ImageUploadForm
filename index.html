@@ -21,7 +21,7 @@
                 <p id="width"></p>
                 <p id="height"></p>
                 <p id="size"></p>
-                <p id="path"></p>
+                <a href="#" id="path"></a>
             </div>
         </div>
     </div>
@@ -44,7 +44,7 @@
                 document.getElementById("width").textContent = `Width: ${data.width}px`;
                 document.getElementById("height").textContent = `Height: ${data.height}px`;
                 document.getElementById("size").textContent = `Size: ${formatBytes(data.size)}`;
-                document.getElementById("path").textContent = `Path: ${data.url}`;
+                document.getElementById("path").href = data.url;
             })
             .catch(error => {
                 console.error('Error:', error);
